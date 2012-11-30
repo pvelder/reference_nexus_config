@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <nexusConfiguration>
-  <version>2.0.0</version>
-  <nexusVersion>2.1.2</nexusVersion>
+  <version>2.2.0</version>
+  <nexusVersion>2.2-01</nexusVersion>
   <globalConnectionSettings>
     <connectionTimeout>20000</connectionTimeout>
     <retrievalRetryCount>3</retrievalRetryCount>
@@ -47,11 +47,11 @@
         <provider>file</provider>
       </localStorage>
       <remoteStorage>
-        <provider>apacheHttpClient3x</provider>
+        <provider>apacheHttpClient4x</provider>
         <url>http://repo1.maven.org/maven2/</url>
       </remoteStorage>
       <externalConfiguration>
-        <proxyMode>ALLOW</proxyMode>
+        <proxyMode>BLOCKED_AUTO</proxyMode>
         <artifactMaxAge>-1</artifactMaxAge>
         <itemMaxAge>1440</itemMaxAge>
         <cleanseRepositoryMetadata>false</cleanseRepositoryMetadata>
@@ -78,11 +78,11 @@
         <provider>file</provider>
       </localStorage>
       <remoteStorage>
-        <provider>apacheHttpClient3x</provider>
+        <provider>apacheHttpClient4x</provider>
         <url>http://repository.apache.org/snapshots/</url>
       </remoteStorage>
       <externalConfiguration>
-        <proxyMode>ALLOW</proxyMode>
+        <proxyMode>BLOCKED_AUTO</proxyMode>
         <artifactMaxAge>1440</artifactMaxAge>
         <itemMaxAge>1440</itemMaxAge>
         <cleanseRepositoryMetadata>false</cleanseRepositoryMetadata>
@@ -109,11 +109,11 @@
         <provider>file</provider>
       </localStorage>
       <remoteStorage>
-        <provider>apacheHttpClient3x</provider>
+        <provider>apacheHttpClient4x</provider>
         <url>http://nexus.codehaus.org/snapshots/</url>
       </remoteStorage>
       <externalConfiguration>
-        <proxyMode>ALLOW</proxyMode>
+        <proxyMode>BLOCKED_AUTO</proxyMode>
         <artifactMaxAge>1440</artifactMaxAge>
         <itemMaxAge>1440</itemMaxAge>
         <cleanseRepositoryMetadata>false</cleanseRepositoryMetadata>
@@ -265,11 +265,11 @@
         <provider>file</provider>
       </localStorage>
       <remoteStorage>
-        <provider>apacheHttpClient3x</provider>
+        <provider>apacheHttpClient4x</provider>
         <url>http://is001s014:7080/archiva/repository/internal/</url>
         <authentication>
           <username>admin</username>
-          <password>{L+ujdbDRjEgHPs8PEJkvnkAj2fV51o+dVQtewzLq9nU=}</password>
+          <password>{dr+kHe3y+lMHOMExB5XdFs/NNZZWx/3C6LolZ6lUPM4=}</password>
         </authentication>
       </remoteStorage>
       <externalConfiguration>
@@ -280,7 +280,7 @@
         <artifactMaxAge>-1</artifactMaxAge>
         <metadataMaxAge>1440</metadataMaxAge>
         <autoBlockActive>true</autoBlockActive>
-        <proxyMode>ALLOW</proxyMode>
+        <proxyMode>BLOCKED_AUTO</proxyMode>
       </externalConfiguration>
     </repository>
     <repository>
@@ -301,7 +301,7 @@
         <provider>file</provider>
       </localStorage>
       <remoteStorage>
-        <provider>apacheHttpClient3x</provider>
+        <provider>apacheHttpClient4x</provider>
         <url>http://repository.sonatype.org/content/groups/flexgroup/</url>
       </remoteStorage>
       <externalConfiguration>
@@ -312,6 +312,7 @@
         <artifactMaxAge>-1</artifactMaxAge>
         <metadataMaxAge>1440</metadataMaxAge>
         <autoBlockActive>true</autoBlockActive>
+        <proxyMode>BLOCKED_AUTO</proxyMode>
       </externalConfiguration>
     </repository>
     <repository>
@@ -332,11 +333,11 @@
         <provider>file</provider>
       </localStorage>
       <remoteStorage>
-        <provider>apacheHttpClient3x</provider>
+        <provider>apacheHttpClient4x</provider>
         <url>http://is001s014:7080/archiva/repository/snapshots/</url>
         <authentication>
           <username>admin</username>
-          <password>{6BaMw0RxfY4HyymX65x6mkyXI3hPrLFBNJ8r2pbv+Dw=}</password>
+          <password>{PVy2HQ0QXYUHVDYacyHgbTug7fWiu1IblbolZ6lUPM4=}</password>
         </authentication>
       </remoteStorage>
       <externalConfiguration>
@@ -347,7 +348,7 @@
         <artifactMaxAge>1440</artifactMaxAge>
         <metadataMaxAge>1440</metadataMaxAge>
         <autoBlockActive>true</autoBlockActive>
-        <proxyMode>ALLOW</proxyMode>
+        <proxyMode>BLOCKED_AUTO</proxyMode>
       </externalConfiguration>
     </repository>
   </repositories>
@@ -420,6 +421,14 @@
         <pattern>.*</pattern>
       </patterns>
     </repositoryTarget>
+    <repositoryTarget>
+      <id>site</id>
+      <name>All (site)</name>
+      <contentClass>site</contentClass>
+      <patterns>
+        <pattern>.*</pattern>
+      </patterns>
+    </repositoryTarget>
   </repositoryTargets>
   <tasks>
     <task>
@@ -444,10 +453,10 @@
     </task>
   </tasks>
   <smtpConfiguration>
-    <hostname>smtp-host</hostname>
+    <hostname>is001vs002.ilias.local</hostname>
     <port>25</port>
-    <username>smtp-username</username>
-    <password>{a6Ss2q6KI2oHbUthu8tZXPq4HhGSOBMA1uhSyYGQos8=}</password>
+    <username></username>
+    <password></password>
     <systemEmailAddress>system@nexus.org</systemEmailAddress>
   </smtpConfiguration>
   <errorReporting>

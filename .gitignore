@@ -6,3 +6,4 @@ tmp
 trash
 health-check
 healthcheck.properties
+*.bak
